@@ -9,15 +9,15 @@ def bazel_iwyu_dependencies():
         build_file = Label("//bazel/iwyu:BUILD.prebuilt_pkg"),
         urls = {
             "linux-aarch64": [
-                "https://github.com/storypku/bazel_iwyu/releases/download/0.19.2/iwyu-0.19.2-aarch64-linux-gnu.tar.xz",
+                "https://github.com/storypku/bazel_iwyu/releases/download/0.20/iwyu-0.20-aarch64-linux-gnu.tar.xz",
             ],
             "linux-x86_64": [
-                "https://github.com/storypku/bazel_iwyu/releases/download/0.19.2/iwyu-0.19.2-x86_64-linux-gnu.tar.xz",
+                "https://github.com/storypku/bazel_iwyu/releases/download/0.20/iwyu-0.20-x86_64-linux-gnu.tar.xz",
             ],
         },
         strip_prefix = {
-            "linux-aarch64": "iwyu-0.19.2-aarch64-linux-gnu",
-            "linux-x86_64": "iwyu-0.19.2-x86_64-linux-gnu",
+            "linux-aarch64": "iwyu-0.20-aarch64-linux-gnu",
+            "linux-x86_64": "iwyu-0.20-x86_64-linux-gnu",
         },
         sha256 = {
             "linux-aarch64": "fc4a6435905427a24918401fe51ca7a5ef87f0ab4b0b2fb10e7988f04d690c0a",
