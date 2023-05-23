@@ -20,8 +20,8 @@ def bazel_iwyu_dependencies():
             "linux-x86_64": "iwyu-0.20-x86_64-linux-gnu",
         },
         sha256 = {
-            "linux-aarch64": "fc4a6435905427a24918401fe51ca7a5ef87f0ab4b0b2fb10e7988f04d690c0a",
-            "linux-x86_64": "39ac88a109e0078654c8061262c44ef9ceb494699cfa8c6f7b7c8aee91573658",
+            "linux-aarch64": "fb5b9390cca2c8427e02fbbd66046ebcc2f2527bd5781420f8f694c9e2890393",
+            "linux-x86_64": "902225023f7348f0b9f4a8b37b668c55091f462c80a10ac6d2fb659c25855277",
         },
     )
 
