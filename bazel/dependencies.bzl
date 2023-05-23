@@ -1,6 +1,6 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
-load("@com_github_storypku_bazel_iwyu//bazel:prebuilt_pkg.bzl", "prebuilt_pkg")
+load("@com_github_kyle_figure_bazel_iwyu//bazel:prebuilt_pkg.bzl", "prebuilt_pkg")
 
 def bazel_iwyu_dependencies():
     maybe(
@@ -9,10 +9,10 @@ def bazel_iwyu_dependencies():
         build_file = Label("//bazel/iwyu:BUILD.prebuilt_pkg"),
         urls = {
             "linux-aarch64": [
-                "https://github.com/storypku/bazel_iwyu/releases/download/0.20/iwyu-0.20-aarch64-linux-gnu.tar.xz",
+                "https://github.com/kyle-figure/bazel_iwyu/releases/download/0.20/iwyu-0.20-aarch64-linux-gnu.tar.xz",
             ],
             "linux-x86_64": [
-                "https://github.com/storypku/bazel_iwyu/releases/download/0.20/iwyu-0.20-x86_64-linux-gnu.tar.xz",
+                "https://github.com/kyle-figure/bazel_iwyu/releases/download/0.20/iwyu-0.20-x86_64-linux-gnu.tar.xz",
             ],
         },
         strip_prefix = {

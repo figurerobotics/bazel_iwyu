@@ -10,7 +10,7 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
-    name = "com_github_storypku_bazel_iwyu",
+    name = "com_github_kyle_figure_bazel_iwyu",
     strip_prefix = "bazel_iwyu-<version>",
     sha256 = "<sha256sum>",
     urls = [
@@ -18,14 +18,14 @@ http_archive(
     ],
 )
 
-load("@com_github_storypku_bazel_iwyu//bazel:dependencies.bzl", "bazel_iwyu_dependencies")
+load("@com_github_kyle_figure_bazel_iwyu//bazel:dependencies.bzl", "bazel_iwyu_dependencies")
 bazel_iwyu_dependencies()
 ```
 
 2. Add the following to your .bazelrc.
 
 ```
-build:iwyu --aspects @com_github_storypku_bazel_iwyu//bazel/iwyu:iwyu.bzl%iwyu_aspect
+build:iwyu --aspects @com_github_kyle_figure_bazel_iwyu//bazel/iwyu:iwyu.bzl%iwyu_aspect
 build:iwyu --output_groups=report
 ```
 
@@ -46,13 +46,13 @@ filegroup(
 Then add the following config to your `.bazelrc` to make it effective.
 
 ```
-build:iwyu --@com_github_storypku_bazel_iwyu//:iwyu_mappings=//bazel/iwyu:my_mappings
+build:iwyu --@com_github_kyle_figure_bazel_iwyu//:iwyu_mappings=//bazel/iwyu:my_mappings
 ```
 
 If custom IWYU options should be used, change the line below:
 
 ```
-build:iwyu --@com_github_storypku_bazel_iwyu//:iwyu_opts=--verbose=3,--no_fwd_decls,--cxx17ns,--max_line_length=127
+build:iwyu --@com_github_kyle_figure_bazel_iwyu//:iwyu_opts=--verbose=3,--no_fwd_decls,--cxx17ns,--max_line_length=127
 ```
 
 3. Run IWYU
